@@ -1,0 +1,19 @@
+{
+  "name": "node-pokemon-api",
+  "version": "1.0.0",
+  "description": "API REST to handle some pokemon ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxMasse31/nodeJs.git"
+  },
+  "author": "Max Masse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxMasse31/nodeJs/issues"
+  },
+  "homepage": "https://github.com/MaxMasse31/nodeJs#readme"
+}
