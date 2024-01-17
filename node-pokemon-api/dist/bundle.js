@@ -15,7 +15,17 @@
   \****************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const express = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\nlet pokemons = __webpack_require__(/*! ./mock-pokemon */ \"./mock-pokemon.js\");\n\nconst app = express();\nconst port = 3000;\n\napp.get(\"/\", (req, res) => res.send(\"Hello Express, 6\"));\n\napp.get(\"/api/pokemons/:id\", (req, res) => {\n  // retourne ici le noombre et non la chaine de caracères\n  const id = parseInt(req.params.id);\n  const pokemon = pokemons.find((pokemon) => pokemon.id === id);\n  var total = pokemons.length;\n  res.json(pokemon);\n});\n\napp.get(\"/api/pokemons/\", (req, res) => {\n  var total = pokemons.length;\n  res.send(`il y a ${total} pokemon dans votre pokedex`);\n});\n\napp.listen(port, () =>\n  console.log(\n    `Notre application Node est démarrée sur http://localhost:${port}`\n  )\n);\n\n\n//# sourceURL=webpack://node-pokemon-api/./app.js?");
+eval("const express = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\nlet pokemons = __webpack_require__(/*! ./mock-pokemon */ \"./mock-pokemon.js\");\nconst {sucess} = __webpack_require__(/*! ./helper */ \"./helper.js\");\n\nconst app = express();\nconst port = 3000;\n\napp.get(\"/\", (req, res) => res.send(\"Hello Express, 6\"));\napp.get(\"/api/pokemons/:id\", (req, res) => {\n  const id = parseInt(req.params.id);\n  const pokemon = pokemons.find((pokemon) => pokemon.id === id);\n  const message= \"Un pokémon a été trouvé\"\n  res.json(sucess(message,pokemon));\n});\n\napp.get(\"/api/pokemons/\", (req, res) => {\n  var total = pokemons;\n  const message= \"voici la liste complète des pokémons\"\nres.json(sucess(message,total));\n});\n\napp.listen(port, () =>\n  console.log(\n    `Notre application Node est démarrée sur http://localhost:${port}`\n  )\n);\n\n\n//# sourceURL=webpack://node-pokemon-api/./app.js?");
+
+/***/ }),
+
+/***/ "./helper.js":
+/*!*******************!*\
+  !*** ./helper.js ***!
+  \*******************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("exports.sucess = (message, data) => {\n  return { message, data };\n};\n\n\n//# sourceURL=webpack://node-pokemon-api/./helper.js?");
 
 /***/ }),
 
