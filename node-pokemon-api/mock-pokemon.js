@@ -10,7 +10,7 @@ const pokemons = [
     },
     {
      id: 2,
-     name: "charmender",
+     name: "Charmender",
      hp: 28,
      cp: 6,
      picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
@@ -19,7 +19,7 @@ const pokemons = [
     },
     {
      id: 3,
-     name: "squirtle",
+     name: "Squirtle",
      hp: 21,
      cp: 4,
      picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
@@ -82,7 +82,7 @@ const pokemons = [
     },
     {
      id: 10,
-     name: "Sabelette",
+     name: "Sandshrew",
      hp: 19,
      cp: 3,
      picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/027.png",
@@ -91,7 +91,7 @@ const pokemons = [
     },
     {
      id: 11,
-     name: "Sandshrew",
+     name: "Clefairy",
      hp: 25,
      cp: 5,
      picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png",
