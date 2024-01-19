@@ -4,8 +4,8 @@
   "description": "API REST to handle some pokemon ",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "built": "webpack --watch"
+    "start": "nodemon app.js"
+   
   },
   "repository": {
     "type": "git",
