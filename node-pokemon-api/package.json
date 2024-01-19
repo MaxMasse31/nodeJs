@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
-   
   },
   "repository": {
     "type": "git",
@@ -33,6 +32,7 @@
   },
   "devDependencies": {
     "install": "^0.13.0",
+    "morgan": "^1.10.0",
     "nodemon": "^3.0.3",
     "npm": "^10.3.0",
     "ou": "^0.0.2",

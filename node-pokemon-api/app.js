@@ -1,21 +1,16 @@
 const express = require("express");
 let pokemons = require("./mock-pokemon");
 const { sucess } = require("./helper");
+const morgan= require("morgan")
 
 const app = express();
 const port = 3000;
 
 //création middleware
 
-// const logguer = (req, res, next) => {
-//   console.log(`URL ${req.url}`);
-//   next();
-// };
+app.use(morgan('dev'))
 
-app.use((req, res, next) => {
-  console.log(`URL ${req.url}`);
-  next();
-});
+
 
 app.get("/", (req, res) => res.send("Hello Express, 6"));
 app.get("/api/pokemons/:id", (req, res) => {
